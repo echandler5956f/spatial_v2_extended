@@ -18,6 +18,7 @@ if length(last_model) ~= 0 && last_npt == npt
   return
 end
 
+model.NQ = 7;
 model.NB = 1;
 model.parent = 0;
 
@@ -65,3 +66,6 @@ model = floatbase(model);		% replace joint 1 with a chain of 6
                                         % joints emulating a floating base
 last_model = model;
 last_npt = npt;
+
+showmotion(model)
+

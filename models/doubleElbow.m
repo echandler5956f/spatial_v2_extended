@@ -25,6 +25,7 @@ end
 % but the joints are subject to the constraint q(2)==q(3).
 
 robot.NB = 3;
+robot.NQ = 3;
 robot.parent = [0 1 2];
 robot.jtype = { 'r', 'r', 'r' };
 
@@ -53,6 +54,8 @@ robot.appearance.body{2} = ...
 robot.appearance.body{3} = ...
   { 'box', [0 -0.07 -0.04; 1 0.07 0.04], ...
     'cyl', [0 0 -0.05; 0 0 0.05], 0.125 };
+
+showmotion(robot)
 
 
 % The function below implements the constraint q(2)==q(3).  If qo and qdo

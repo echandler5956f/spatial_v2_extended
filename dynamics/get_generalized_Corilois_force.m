@@ -38,6 +38,8 @@ end
 switch class(q)
     case 'double'
         Cqd = zeros(model.NB,1);
+    case 'sym'
+        Cqd = sym(zeros(model.NB,1));
     case 'casadi.SX'
         Cqd = casadi.SX.sym('Cqd',model.NB,1);
     case 'casadi.MX'

@@ -32,6 +32,7 @@ if nargin < 2
   bf = 1;
 end
 
+model.NQ = 7;
 model.NB = nb;
 
 for i = 1:nb

@@ -20,6 +20,7 @@ if length(memory) ~= 0
   return
 end
 
+model.NQ = 7;
 model.NB = 2;
 model.parent = [0 1];
 
@@ -51,3 +52,6 @@ model.camera.zoom = 0.9;
 model = floatbase(model);		% replace joint 1 with a chain of 6
                                         % joints emulating a floating base
 memory = model;
+
+showmotion(model)
+
